@@ -14,3 +14,7 @@ The wiring needed is well documented, so not repeated here.
 (The prototype board was from https://www.amazon.co.uk/dp/B081QYPHHP and the tasmota smart socket from https://www.mylocalbytes.com/products/smart-plug-pm-uk )
 
 
+Getting the address of the snsor is documented here: https://esphome.io/components/sensor/dallas.html?highlight=dallas
+
+The tasmota smart socket (or any other smart socket) needs to be accessible by HomeAssistant.
+
