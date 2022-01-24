@@ -14,7 +14,11 @@ The wiring needed is well documented, so not repeated here.
 (The prototype board was from https://www.amazon.co.uk/dp/B081QYPHHP and the tasmota smart socket from https://www.mylocalbytes.com/products/smart-plug-pm-uk )
 
 
+Programming the NodeMCU was done using the ESPHome addon within HomeAssistant.
+
 Getting the address of the snsor is documented here: https://esphome.io/components/sensor/dallas.html?highlight=dallas
+It's noted in the yaml file where to initially comment the lines in order to get the address of the DS18B20
 
 The tasmota smart socket (or any other smart socket) needs to be accessible by HomeAssistant.
+The ha-automation was generated from the ha front end - when temp>80, switch off smart switch, call service to notify a phone app.
 
