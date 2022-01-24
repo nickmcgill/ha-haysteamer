@@ -20,6 +20,7 @@ ota:
 
 dallas:
   - pin: GPIO4
+# to get the sensor address, comment out the lines below this.
     update_interval: 15s
 
   
