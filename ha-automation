@@ -1,0 +1,23 @@
+# this was all set up from the HA gui
+# devices etc have been edited out
+- id: 'xxxx'
+  alias: Hay steamer control
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: xxxxxx
+    entity_id: sensor.steamer_temp
+    domain: sensor
+    above: 80
+  condition: []
+  action:
+  - type: turn_off
+    device_id: xxxxx
+    entity_id: switch.tasmota_5
+    domain: switch
+  - service: notify.mobile_app_myphone
+    data:
+      message: Steamer reached temp
+      title: Hay ready
+  mode: single
