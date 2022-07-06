@@ -16,9 +16,15 @@ The wiring needed is well documented, so not repeated here.
 
 Programming the NodeMCU was done using the ESPHome addon within HomeAssistant.
 
-Getting the address of the snsor is documented here: https://esphome.io/components/sensor/dallas.html?highlight=dallas
+Getting the address of the sensor is documented here: https://esphome.io/components/sensor/dallas.html?highlight=dallas
 It's noted in the yaml file where to initially comment the lines in order to get the address of the DS18B20
 
 The tasmota smart socket (or any other smart socket) needs to be accessible by HomeAssistant.
 The ha-automation was generated from the ha front end - when temp>80, switch off smart switch, call service to notify a phone app.
+
+Now added pressure sensors to monitor water levels in the steamer and stop it boiling dry.
+Pressure sensors from https://www.amazon.co.uk/gp/product/B07TWLP3X8 (other suppliers are available).
+
+Data line from HX711 linked to D0, clock to D1, used 5V from the Vin pin, and adjacent ground pin.
+
 
