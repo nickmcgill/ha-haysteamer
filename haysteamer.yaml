@@ -28,5 +28,19 @@ sensor:
   - platform: dallas
     address: 0x3d00000001b70628
     name: "Steamer temp"
+
+  - platform: hx711
+    name: "Water level"
+    dout_pin: D0
+    clk_pin: D1
+    gain: 128
+    filters:
+     - calibrate_linear:
+         - -107500 -> 0
+         - -64400 -> 95
+    update_interval: 10s
+    unit_of_measurement: '%'
+
+
     
 
